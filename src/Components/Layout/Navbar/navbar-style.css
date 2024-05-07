@@ -25,9 +25,15 @@
   letter-spacing: 2px;
   transition: all 0.1s linear;
 }
-.nav-links .nav-link-li a:hover {
+.dark .nav-links .nav-link-li a:hover {
   border-bottom: 2px solid rgba(255, 255, 255, 0.87);
 }
-.nav-links .nav-link-li a.active {
+.dark .nav-links .nav-link-li a.active {
   border-bottom: 2px solid rgba(255, 255, 255, 0.87);
+}
+.light .nav-links .nav-link-li a:hover {
+  border-bottom: 2px solid rgba(37, 40, 45, 0.87);
+}
+.light .nav-links .nav-link-li a.active {
+  border-bottom: 2px solid rgba(37, 40, 45, 0.87);
 }

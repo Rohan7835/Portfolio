@@ -21,10 +21,15 @@
   font-size: 140px;
   font-weight: bold;
   letter-spacing: 2px;
-  text-shadow: 10px 16px 7px black;
   line-height: 160px;
   user-select: none;
   /* text-transform: uppercase; */
+}
+.light .hero-section .hero-name {
+  text-shadow: 10px 16px 7px #dddddd;
+}
+.dark .hero-section .hero-name {
+  text-shadow: 10px 16px 7px black;
 }
 @keyframes slideup {
   from {
@@ -57,7 +62,7 @@
   transform: rotate(90deg);
 }
 
-.cursor {
+.dark .cursor {
   position: fixed;
   border: 2px solid rgba(255, 255, 255, 0.87);
   width: 20px;
@@ -69,6 +74,25 @@
   box-shadow: 7px 16px 7px black;
   transition: all 0.04s linear;
 }
+.light .cursor {
+  position: fixed;
+  border: 2px solid rgb(87 91 97);
+  width: 20px;
+  height: 20px;
+  background: rgb(0 0 0 / 61%);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(1);
+  box-shadow: 7px 16px 7px #e5e5e5;
+  transition: all 0.04s linear;
+}
 .cursor-none {
   cursor: none !important;
+}
+
+.toggle-btn {
+  position: absolute;
+  top: 200px;
+  left: 400px;
+  padding: 5px;
 }
