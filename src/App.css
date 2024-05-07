@@ -89,10 +89,3 @@
 .cursor-none {
   cursor: none !important;
 }
-
-.toggle-btn {
-  position: absolute;
-  top: 200px;
-  left: 400px;
-  padding: 5px;
-}

@@ -5,7 +5,7 @@ import RoutesComp from "./Routes/Routes";
 
 function App() {
   const [cursorPos, setCursorPos] = useState({ x: 173, y: 319 });
-  const [darkTheme, setDarkTheme] = useState(false);
+  const [darkTheme, setDarkTheme] = useState(true);
 
   const changeCursor = (e) => {
     setCursorPos({ x: e.pageX, y: e.pageY });
@@ -17,12 +17,14 @@ function App() {
       } body main-container cursor-none`}
       onMouseMove={(e) => changeCursor(e)}
     >
-      <button
-        className="toggle-btn"
-        onClick={() => setDarkTheme((prv) => !prv)}
-      >
-        Toggle
-      </button>
+      <div className="toggle-btn">
+        <input
+          type="checkbox"
+          id="darkmode-toggle"
+          onChange={() => setDarkTheme((prv) => !prv)}
+        />
+        <label for="darkmode-toggle" />
+      </div>
       <div
         className="cursor"
         style={{ left: cursorPos.x, top: cursorPos.y }}

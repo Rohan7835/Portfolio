@@ -7,7 +7,6 @@ const Navbar = () => {
       <div className="logo">LOGO</div>
       <div className="nav">
         <ul className="nav-links">
-          <li className="nav-link-li">Toggle Theme</li>
           <li className="nav-link-li">
             <a href="">Projects</a>
           </li>

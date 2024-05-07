@@ -69,3 +69,57 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
+.toggle-btn {
+  position: fixed;
+  top: 100px;
+  right: 0px;
+  transform: rotate(90deg);
+}
+.toggle-btn:hover ~ .cursor {
+  display: none;
+}
+.toggle-btn label {
+  width: 70px;
+  height: 30px;
+  position: relative;
+  display: block;
+  background: #cdcdcd;
+  border-radius: 40px;
+  box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4),
+    inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+.toggle-btn label:after {
+  content: "";
+  width: 27px;
+  height: 27px;
+  position: absolute;
+  top: 2px;
+  left: 68px;
+  transform: translateX(-100%);
+  background: linear-gradient(180deg, #777, #3a3a3a);
+  border-radius: 50%;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.toggle-btn input {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+.toggle-btn input:checked + label {
+  background: #ebebeb;
+}
+.toggle-btn input:checked + label:after {
+  left: 2px;
+  /* background: linear-gradient(180deg, #ffcc89, #d8860b); */
+  /* background: linear-gradient(180deg, #89daff, #0b86d8); */
+  background: white;
+  transform: none;
+}
+.toggle-btn label,
+.toggle-btn label:after {
+  transition: 0.3s;
+}
+.toggle-btn label:active:after {
+  width: 7px;
+}
