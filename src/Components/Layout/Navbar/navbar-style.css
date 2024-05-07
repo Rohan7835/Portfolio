@@ -1,0 +1,33 @@
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  width: 100%;
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+.nav .nav-links {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.nav-links .nav-link-li {
+  list-style: none;
+  padding: 4px 10px;
+  margin: 0px 20px;
+}
+.nav-links .nav-link-li a {
+  padding-bottom: 6px;
+  letter-spacing: 2px;
+  transition: all 0.1s linear;
+}
+.nav-links .nav-link-li a:hover {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.87);
+}
+.nav-links .nav-link-li a.active {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.87);
+}

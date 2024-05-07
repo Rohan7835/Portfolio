@@ -1,0 +1,74 @@
+.h-100 {
+  height: 100vh;
+}
+.scroll-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+.scroll-animate {
+  scroll-snap-align: start;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-section {
+  animation: slideup 0.3s linear;
+}
+.hero-section .hero-name {
+  font-size: 140px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-shadow: 10px 16px 7px black;
+  line-height: 160px;
+  user-select: none;
+  /* text-transform: uppercase; */
+}
+@keyframes slideup {
+  from {
+    margin-top: 100px;
+    opacity: 0.1;
+  }
+  to {
+    margin: 0px;
+    opacity: 1;
+  }
+}
+.hero-support-text {
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+.hero-support-text.left {
+  margin-left: 20px;
+}
+.hero-support-text.right {
+  margin-right: 40px;
+  display: flex;
+  justify-content: right;
+}
+.main-container::before {
+  content: "Scroll ━";
+  position: fixed;
+  bottom: 80px;
+  letter-spacing: 2px;
+  right: 20px;
+  transform: rotate(90deg);
+}
+
+.cursor {
+  position: fixed;
+  border: 2px solid rgba(255, 255, 255, 0.87);
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.27);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(1);
+  box-shadow: 7px 16px 7px black;
+  transition: all 0.04s linear;
+}
+.cursor-none {
+  cursor: none !important;
+}
