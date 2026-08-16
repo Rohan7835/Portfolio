@@ -148,6 +148,7 @@ const ArrowIcon = () => <span aria-hidden="true">↗</span>;
 const Home = () => {
   const [activeExperience, setActiveExperience] = useState(0);
   const corporateExperienceYears = getCorporateExperienceYears();
+  const resumeUrl = `${import.meta.env.BASE_URL}Rohan-Chauhan-Resume.pdf`;
 
   return (
     <main id="main-content">
@@ -159,7 +160,7 @@ const Home = () => {
             <p className="hero-intro">I&apos;m <strong>Rohan Chauhan</strong>, a Senior Software Engineer with {corporateExperienceYears}+ years of corporate experience creating fast, scalable, and thoughtful web products.</p>
             <div className="hero-actions">
               <a className="button button-primary" href="#work">Explore my work <ArrowIcon /></a>
-              <a className="button button-ghost" href="/Rohan-Chauhan-Resume.pdf" download>Download résumé <span aria-hidden="true">↓</span></a>
+              <a className="button button-ghost" href={resumeUrl} download>Download résumé <span aria-hidden="true">↓</span></a>
             </div>
           </div>
 
@@ -284,7 +285,7 @@ const Home = () => {
           <div className="contact-links">
             <a href="https://www.linkedin.com/in/rohan-chauhan" target="_blank" rel="noreferrer">LinkedIn <ArrowIcon /></a>
             <a href="tel:+917835882372">+91 78358 82372 <ArrowIcon /></a>
-            <a href="/Rohan-Chauhan-Resume.pdf" download>Résumé <span aria-hidden="true">↓</span></a>
+            <a href={resumeUrl} download>Résumé <span aria-hidden="true">↓</span></a>
           </div>
         </Reveal></div>
       </section>
