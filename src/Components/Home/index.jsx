@@ -245,6 +245,11 @@ const Home = () => {
           <div><p className="eyebrow">03 / Selected work</p><h2>Products with purpose.</h2></div>
           <p className="section-lead">A selection of commerce, insurance, fintech, and Web3 platforms delivered across my career.</p>
         </Reveal>
+        <div className="projects-mobile-hint" aria-hidden="true">
+          <span>Swipe to explore</span>
+          <span>←</span>
+          <span>→</span>
+        </div>
         <div className="projects-grid">
           {projects.map((project, index) => (
             <Reveal className={`project-card accent-${project.accent}`} delay={(index % 2) * 100} key={project.name}>
