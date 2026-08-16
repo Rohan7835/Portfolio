@@ -1,15 +1,12 @@
-import { Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "../Components/Home";
-import { BrowserRouter } from "react-router-dom";
 
-const RoutesComp = () => {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path={"/"} element={<Home />}></Route>
-      </Routes>
-    </BrowserRouter>
-  );
-};
+const RoutesComp = () => (
+  <BrowserRouter>
+    <Routes>
+      <Route path="*" element={<Home />} />
+    </Routes>
+  </BrowserRouter>
+);
 
 export default RoutesComp;
